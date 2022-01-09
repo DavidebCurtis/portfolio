@@ -84,9 +84,22 @@
   height: 1px;
   background-color: white;
   border-bottom: 2px solid white;
+  transition: top 1s 480ms, left 1s 480ms, width 1s 480ms ease, height 1s 1s,
+    background-color 200ms 500ms ease, transform 200ms 1700ms;
+}
+
+.menu:checked + label:after {
+  top: 50px;
+  left: 38px;
+  transform: rotate(-45deg);
+  width: 42px;
+  height: 1px;
+  background-color: white;
+  border-top-width: 0px;
+  border-bottom: 2px solid white;
   transition: top 1s 480ms, left 1s 480ms, width 1s 480ms ease,
-    height 100ms 300ms, background-color 200ms 500ms ease,
-    transform 200ms 1700ms;
+    border-top-width 100ms 200ms ease, height 1s 1s,
+    background-color 200ms 500ms ease, transform 200ms 1700ms;
 }
 
 .links {
