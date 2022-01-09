@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+/* navigation blob */
+.blob {
+  position: fixed;
+  top: 18px;
+  left: 23px;
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.3);
+  background-color: #353746;
+  animation: start 1.8s;
+  animation: border-transform 5s linear infinite;
+}
+
+/* animation for navigation blob */
+@keyframes border-transform {
+  0%,
+  100% {
+    border-radius: 78% 37% 47% 58% / 55% 48% 52% 45%;
+  }
+  14% {
+    border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+  }
+  28% {
+    border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+  }
+  42% {
+    border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+  }
+  56% {
+    border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+  }
+  70% {
+    border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+  }
+  84% {
+    border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+  }
+}
+
+.checkbox-wrapper input {
+  position: fixed;
+  top: 28px;
+  left: 33px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  z-index: 15;
+}
+
+.checkbox-wrapper label::before {
+  content: "";
+  height: 1px;
+  width: 28px;
+  border-bottom: 2px solid white;
+  position: fixed;
+  left: 46px;
+  top: 40px;
+  z-index: 11;
+}
+
+.checkbox-wrapper label::after {
+  content: "";
+  height: 10px;
+  width: 28px;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  position: fixed;
+  left: 46px;
+  top: 53px;
+  z-index: 11;
+}
+
+.menu:checked + label:before {
+  top: 50px;
+  left: 38px;
+  transform: rotate(45deg);
+  width: 42px;
+  height: 1px;
+  background-color: white;
+  border-bottom: 2px solid white;
+  transition: top 1s 480ms, left 1s 480ms, width 1s 480ms ease,
+    height 100ms 300ms, background-color 200ms 500ms ease,
+    transform 200ms 1700ms;
+}
+
+.links {
+  display: none;
+}
+
+nav {
+  position: fixed;
+}
