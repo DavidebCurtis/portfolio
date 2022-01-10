@@ -3,6 +3,8 @@
 /* navigation blob */
 .blob {
   position: fixed;
+  display: block;
+  z-index: -1;
   top: 18px;
   left: 23px;
   width: 70px;
@@ -13,6 +15,32 @@
   background-color: #353746;
   animation: start 1.8s;
   animation: border-transform 5s linear infinite;
+}
+
+.menu:checked ~ .blob {
+  top: 18px;
+  left: 24px;
+  height: 380px;
+  width: 240px;
+  animation: border-transform 0s linear 0;
+  transition: top 800ms ease-out, width 800ms ease-out, height 800ms ease-out,
+    left 800ms ease-out;
+}
+
+.menu:not(:checked) ~ .blob {
+  position: fixed;
+  top: 18px;
+  left: 23px;
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.3);
+  background-color: #353746;
+  animation: start 1.8s;
+  animation: border-transform 5s linear infinite;
+  transition: top 800ms ease-out, width 800ms ease-out, height 800ms ease-out,
+    left 800ms ease-out;
 }
 
 /* animation for navigation blob */
@@ -53,6 +81,7 @@
   z-index: 15;
 }
 
+/* top hamburger bar */
 .checkbox-wrapper label::before {
   content: "";
   height: 1px;
@@ -64,6 +93,7 @@
   z-index: 11;
 }
 
+/* bottom two hamburger bars */
 .checkbox-wrapper label::after {
   content: "";
   height: 10px;
@@ -76,6 +106,7 @@
   z-index: 11;
 }
 
+/* top hamburger bar animation on click - turning in to an X */
 .menu:checked + label:before {
   top: 50px;
   left: 38px;
@@ -84,10 +115,12 @@
   height: 1px;
   background-color: white;
   border-bottom: 2px solid white;
-  transition: top 1s 480ms, left 1s 480ms, width 1s 480ms ease, height 1s 1s,
-    background-color 200ms 500ms ease, transform 200ms 1700ms;
+  transition: top 1s 480ms, left 600ms 200ms, width 1s 200ms ease,
+    height 600ms 200ms, background-color 200ms 500ms ease,
+    transform 200ms 1000ms;
 }
 
+/* bottom hamburger bar animation on click - turning in to an X */
 .menu:checked + label:after {
   top: 50px;
   left: 38px;
@@ -97,15 +130,24 @@
   background-color: white;
   border-top-width: 0px;
   border-bottom: 2px solid white;
-  transition: top 1s 480ms, left 1s 480ms, width 1s 480ms ease,
-    border-top-width 100ms 200ms ease, height 1s 1s,
-    background-color 200ms 500ms ease, transform 200ms 1700ms;
+  transition: top 1s 480ms, left 600ms 200ms, width 1s 200ms ease,
+    border-top-width 100ms 200ms ease, height 600ms 200ms,
+    background-color 200ms 500ms ease, transform 200ms 1000ms;
 }
 
 .links {
-  display: none;
+  visibility: hidden;
+  display: block;
 }
 
-nav {
-  position: fixed;
+.menu:checked ~ .links {
+  visibility: visible;
 }
+
+/* nav {
+  position: relative;
+  left: 16px;
+  height: 380px;
+  width: 240px;
+  background-color: #353746;
+} */
