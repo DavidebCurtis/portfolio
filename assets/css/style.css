@@ -10,7 +10,7 @@ body {
 .blob {
   position: fixed;
   display: block;
-  z-index: 999;
+  z-index: 1;
   top: 18px;
   left: 23px;
   width: 70px;
@@ -23,6 +23,7 @@ body {
   animation: border-transform 5s linear infinite;
 }
 
+/* Nav blob icon on click animation */
 .menu:checked ~ .blob {
   top: 18px;
   left: 24px;
@@ -33,6 +34,7 @@ body {
     left 800ms ease-out;
 }
 
+/* Nav blob icon on click animation */
 .menu:not(:checked) ~ .blob {
   position: fixed;
   top: 18px;
@@ -75,6 +77,7 @@ body {
   }
 }
 
+/* entire navigation zone */
 .checkbox-wrapper {
   position: absolute;
   display: block;
@@ -84,6 +87,7 @@ body {
   top: 18px;
 }
 
+/* checkbox for navigation open/closed */
 .checkbox-wrapper input {
   position: fixed;
   top: 28px;
@@ -174,6 +178,7 @@ body {
     border-top-width 1ms 10ms ease, height 200ms 480ms, transform 200ms 10ms;
 }
 
+/* properties for link text */
 .links li a {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
@@ -182,6 +187,7 @@ body {
   color: aliceblue;
 }
 
+/* links container */
 .links {
   visibility: hidden;
   display: block;
@@ -199,6 +205,7 @@ body {
   padding: 0px;
 }
 
+/* visibility for links on checkbox input checked */
 .menu:checked ~ .links {
   visibility: visible;
   transition: visibility 700ms 600ms;
