@@ -342,11 +342,13 @@ article {
 .projects-container img {
   width: 63%;
   margin-top: 2%;
-  margin-left: 14%;
 }
 
 .info {
-  width: 20%;
+  margin-right: 5%;
+  margin-left: 6%;
+  text-align: right;
+  margin-top: 5%;
 }
 
 .info h3 {
@@ -358,5 +360,17 @@ article {
 .info h4 {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  color: #fde137;
+  color: #cc3030;
+}
+
+.info p {
+  color: whitesmoke;
+  background-color: #cc3030;
+  padding: 13px;
+  margin: 0px;
+  border-radius: 2%;
+  text-align: initial;
+  width: 214px;
+  right: 10%;
+  position: absolute;
 }
