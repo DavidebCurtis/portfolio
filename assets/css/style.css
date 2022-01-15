@@ -4,13 +4,49 @@ html,
 body {
   margin: 0px;
   height: 100%;
+  box-sizing: border-box;
+}
+
+/* properties for link text */
+.links li a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 3.1;
+  color: whitesmoke;
+}
+
+/* links container */
+.links {
+  visibility: hidden;
+  display: block;
+  position: fixed;
+  z-index: 9999;
+  list-style: none;
+  pointer-events: none;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  top: 18px;
+  left: 23px;
+  height: 380px;
+  width: 240px;
+  padding: 0px;
+}
+
+/* visibility for links on checkbox input checked */
+.menu:checked ~ .links {
+  visibility: visible;
+  transition: visibility 700ms 600ms;
+  z-index: 99999;
 }
 
 /* navigation blob */
 .blob {
   position: fixed;
   display: block;
-  z-index: 1;
   top: 18px;
   left: 23px;
   width: 70px;
@@ -37,6 +73,7 @@ body {
 /* Nav blob icon on click animation */
 .menu:not(:checked) ~ .blob {
   position: fixed;
+  display: block;
   top: 18px;
   left: 23px;
   width: 70px;
@@ -178,53 +215,12 @@ body {
     border-top-width 1ms 10ms ease, height 200ms 480ms, transform 200ms 10ms;
 }
 
-/* properties for link text */
-.links li a {
-  font-family: "Montserrat", sans-serif;
-  text-decoration: none;
-  font-size: 15px;
-  line-height: 3.1;
-  color: aliceblue;
-}
-
-/* links container */
-.links {
-  visibility: hidden;
-  display: block;
-  list-style: none;
-  pointer-events: none;
-  text-align: center;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  top: 0px;
-  left: 24px;
-  height: 380px;
-  width: 240px;
-  padding: 0px;
-}
-
-/* visibility for links on checkbox input checked */
-.menu:checked ~ .links {
-  visibility: visible;
-  transition: visibility 700ms 600ms;
-}
-
-.links ul {
-  display: block;
-}
-
-.menu:checked ~ .links ul {
-  top: 100px;
-  transition: 250ms linear;
-}
-
 /* Hero Container properties */
 .hero {
   width: 100vw;
-  height: 78vh;
-  background-color: antiquewhite;
+  height: 84vh;
+  background-color: whitesmoke;
+  /* background-color: #353746; */
   display: flex;
   justify-content: center;
 }
@@ -255,7 +251,112 @@ body {
 }
 
 .about {
-  background-color: blue;
-  width: 100vw;
-  height: 40vh;
+  background-color: #1f2833;
+  overflow: hidden;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: auto;
+  margin-top: 160px;
+}
+
+.about-container h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 54px;
+  color: whitesmoke;
+  margin-bottom: 0px;
+}
+
+#about-line {
+  border-top: 2px solid whitesmoke;
+  height: 1px;
+  margin-top: 80px;
+  margin-left: 20px;
+  flex-grow: 1;
+  margin-right: 18%;
+}
+
+.break {
+  flex-basis: 100%;
+}
+
+article {
+  font-family: "Montserrat", sans-serif;
+  color: whitesmoke;
+  margin-left: 5%;
+  margin-bottom: 3%;
+  margin-right: 20%;
+  margin-top: 20px;
+}
+
+.skills {
+  align-items: center;
+  display: flex;
+}
+
+.skills img {
+  width: 80px;
+  margin-left: 33px;
+}
+
+.skills img:last-child {
+  height: 69px;
+}
+
+.projects {
+  background-color: #1f2833;
+  overflow: hidden;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 100px;
+  justify-content: flex-end;
+}
+
+.projects-container h2 {
+  margin-top: 0px;
+  margin-right: 5%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 54px;
+  color: whitesmoke;
+  margin-bottom: 0px;
+}
+
+#projects-line {
+  border-top: 2px solid whitesmoke;
+  height: 1px;
+  margin-top: 35px;
+  margin-left: 45%;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.projects-container img {
+  width: 63%;
+  margin-top: 2%;
+  margin-left: 14%;
+}
+
+.info {
+  width: 20%;
+}
+
+.info h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: whitesmoke;
+}
+
+.info h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #fde137;
 }
