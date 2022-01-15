@@ -15,16 +15,16 @@
         <input type="checkbox" name="menu" class="menu" />
         <label for="menu"></label>
         <ul class="links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Other Work</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#other-works">Other Work</a></li>
+            <li><a href="#contact-me">Contact</a></li>
         </ul>
         <div class="blob"></div>
     </nav>
     <main>
         <!-- Hero Image -->
-        <div class="hero">
+        <div class="hero" id="hero">
             <div class="img"></div>
             <div class="social-media">
                 <a href="https://github.com/DavidebCurtis" target="_blank"><img src="./assets/images/github.png"
@@ -34,7 +34,7 @@
             </div>
         </div>
         <!-- About -->
-        <Section class="about">
+        <Section class="about" id="about">
             <div class="about-container">
                 <h1>About Me</h1>
                 <div id="about-line"></div>
@@ -54,7 +54,7 @@
             </div>
         </Section>
         <!-- Projects -->
-        <Section class="projects">
+        <Section class="projects" id="projects">
             <div class="projects-container">
                 <div id="projects-line"></div>
                 <h2>Projects</h2>
@@ -69,19 +69,22 @@
             </div>
         </Section>
         <!-- Other Works -->
-        <section class="other-works">
+        <section class="other-works" id="other-works">
             <div class="other-works-container">
                 <h1>Other Works</h1>
                 <div id="other-works-line"></div>
                 <div class="works-wrapper">
-                    <img src="assets/images/fanpage.png" alt="Mac Demarco fanpage" class="image">
-                    <img src="assets/images/horiseon.png" alt="horiseon SEO website" class="image">
-                    <img src="assets/images/robots.jpg" alt="robot gladiator game" class="image">
-                    <img src="" alt="image" class="image">
-                    <img src="" alt="image" class="image">
-                    <img src="" alt="image" class="image">
-                    <img src="" alt="image" class="image">
-                    <img src="" alt="image" class="image">
+                    <a href="https://davidebcurtis.github.io/fanpage/" target="_blank"><img
+                            src="assets/images/fanpage.png" alt="Mac Demarco fanpage" class="image"></a>
+                    <a href="https://davidebcurtis.github.io/challenge-1/" target="_blank"><img
+                            src="assets/images/horiseon.png" alt="horiseon SEO website" class="image"></a>
+                    <a href="https://davidebcurtis.github.io/robot-gladiators/" target="_blank"><img
+                            src="assets/images/robots.jpg" alt="robot gladiator game" class="image"></a>
+                    <a href="" target="_blank"><img src="" alt="image" class="image"></a>
+                    <a href="" target="_blank"><img src="" alt="image" class="image"></a>
+                    <a href="" target="_blank"><img src="" alt="image" class="image"></a>
+                    <a href="" target="_blank"><img src="" alt="image" class="image"></a>
+                    <a href="" target="_blank"><img src="" alt="image" class="image"></a>
                 </div>
                 <!-- <div class="overlay-wrapper">
                     <div class="overlay">
@@ -111,11 +114,13 @@
                 </div> -->
         </section>
         <!-- Contact -->
-        <section class="contact-me">
+        <section class="contact-me" id="contact-me">
             <div class="contact-me-container">
                 <h1>Contact Me</h1>
                 <p> What are you waiting for? Go ahead and reach out to me to see what I can do for you!</p>
-                <button>Email</button>
+                <a href="mailto:heythereimdavidcurtis@gmail.com">
+                    <button class="button">Go!</button>
+                </a>
             </div>
         </section>
 

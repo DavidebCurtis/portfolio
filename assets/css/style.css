@@ -16,14 +16,16 @@ body {
   color: whitesmoke;
 }
 
+.links li {
+  height: 60px;
+}
+
 /* links container */
 .links {
   visibility: hidden;
   display: block;
   position: fixed;
-  z-index: 9999;
   list-style: none;
-  pointer-events: none;
   text-align: center;
   padding: 0;
   width: 100%;
@@ -31,16 +33,17 @@ body {
   margin: 0px;
   top: 18px;
   left: 23px;
-  height: 380px;
+  height: 300px;
   width: 240px;
   padding: 0px;
+  margin-top: 38px;
 }
 
 /* visibility for links on checkbox input checked */
 .menu:checked ~ .links {
   visibility: visible;
   transition: visibility 700ms 600ms;
-  z-index: 99999;
+  z-index: 5;
 }
 
 /* navigation blob */
@@ -57,17 +60,19 @@ body {
   background-color: #353746;
   animation: start 1.8s;
   animation: border-transform 5s linear infinite;
+  z-index: 4;
 }
 
 /* Nav blob icon on click animation */
 .menu:checked ~ .blob {
   top: 18px;
   left: 24px;
-  height: 380px;
+  height: 300px;
   width: 240px;
   animation: border-transform 0s linear 0;
   transition: top 800ms ease-out, width 800ms ease-out, height 800ms ease-out,
     left 800ms ease-out;
+  z-index: 4;
 }
 
 /* Nav blob icon on click animation */
@@ -86,6 +91,7 @@ body {
   animation: border-transform 5s linear infinite;
   transition: top 800ms ease-out, width 800ms ease-out, height 800ms ease-out,
     left 800ms ease-out;
+  z-index: 4;
 }
 
 /* animation for navigation blob */
@@ -426,6 +432,10 @@ article {
   height: 260px;
   object-fit: cover;
   background-color: white;
+  /* margin-top: 5%; */
+}
+
+.works-wrapper a {
   margin-top: 5%;
 }
 
@@ -462,4 +472,8 @@ article {
 
 button {
   margin-top: 50px;
+}
+.button {
+  width: 80px;
+  height: 40px;
 }
