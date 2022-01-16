@@ -16,6 +16,12 @@ body {
   color: whitesmoke;
 }
 
+/* hover effects for links */
+.links li a:hover {
+  color: #cc3030;
+}
+
+/* adds space in nav between links */
 .links li {
   height: 60px;
 }
@@ -120,7 +126,7 @@ body {
   }
 }
 
-/* entire navigation zone */
+/* wrapper for checkbox element */
 .checkbox-wrapper {
   position: absolute;
   display: block;
@@ -258,7 +264,10 @@ body {
   width: 37px;
 }
 
-.about {
+/* section backgrounds */
+.about,
+.projects,
+.other-works {
   background-color: #1f2833;
   overflow: hidden;
 }
@@ -315,11 +324,6 @@ article {
   height: 69px;
 }
 
-.projects {
-  background-color: #1f2833;
-  overflow: hidden;
-}
-
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -348,10 +352,14 @@ article {
   box-shadow: #1a0e0e 3px 6px 16px;
 }
 
-.projects-container img {
+.rb-link {
   width: 69%;
   margin-top: 4%;
   box-shadow: #1a0e0e 0px 5px 36px;
+}
+
+.projects-container img {
+  width: 100%;
 }
 
 .info {
@@ -387,11 +395,6 @@ article {
   right: 10%;
   position: absolute;
   box-shadow: #1a0e0e 5px 5px 20px;
-}
-
-.other-works {
-  background-color: #1f2833;
-  overflow: hidden;
 }
 
 .other-works-container {
@@ -439,6 +442,17 @@ article {
 
 .works-wrapper a {
   margin-top: 5%;
+  background-color: whitesmoke;
+  color: #1f2833;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  background-color: #cc3030;
+}
+
+.works-wrapper img:hover {
+  width: 268px;
+  height: 268px;
 }
 
 .contact-me {
@@ -511,5 +525,24 @@ button {
     margin-left: 0px;
     margin-right: 0px;
     text-align: center;
+  }
+
+  .projects-container {
+    margin-top: 80px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero .img {
+    position: relative;
+    max-width: 350px;
+    height: auto;
+    top: 16%;
+    object-fit: cover;
+    background-color: aqua;
+    box-shadow: 0 6px 24px 0 rgb(0 0 0 / 30%);
+  }
+  .hero .img {
+    transform: translate(20px, -50px);
   }
 }
