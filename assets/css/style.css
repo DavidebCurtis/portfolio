@@ -175,8 +175,8 @@ body {
   transform: rotate(45deg);
   width: 42px;
   height: 1px;
-  background-color: white;
-  border-bottom: 2px solid white;
+  background-color: #cc3030;
+  border-bottom: 2px solid #cc3030;
   transition: top 200ms 200ms, left 600ms 200ms, width 1s 200ms ease,
     height 600ms 200ms, background-color 200ms 500ms ease, transform 200ms 500ms;
 }
@@ -188,9 +188,10 @@ body {
   transform: rotate(-45deg);
   width: 42px;
   height: 1px;
-  background-color: white;
+  border-color: #cc3030;
+  background-color: #cc3030;
   border-top-width: 0px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #cc3030;
   transition: top 200ms 200ms, left 600ms 200ms, width 1s 200ms ease,
     border-top-width 100ms 200ms ease, height 600ms 200ms,
     background-color 200ms 500ms ease, transform 200ms 500ms;
@@ -234,10 +235,11 @@ body {
 /* hero img size and position */
 .hero .img {
   position: relative;
-  width: 495px;
+  max-width: 495px;
   height: 630px;
   top: 16%;
   background-color: aqua;
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* Github and LinkedIn Links position*/
@@ -356,7 +358,7 @@ article {
   margin-right: 5%;
   margin-left: 6%;
   text-align: right;
-  margin-top: 10%;
+  margin-top: 4%;
 }
 
 .info h3 {
@@ -466,7 +468,7 @@ article {
   font-family: "Montserrat", sans-serif;
   color: whitesmoke;
   margin-top: 40px;
-  width: 23%;
+  width: 300px;
   text-align: center;
 }
 
