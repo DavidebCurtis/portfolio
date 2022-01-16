@@ -479,3 +479,37 @@ button {
   width: 80px;
   height: 40px;
 }
+
+@media only screen and (max-width: 780px) {
+  .info {
+    display: none;
+  }
+  .projects-container {
+    justify-content: center;
+  }
+  #projects-line {
+    border-top: 2px solid #cc3030;
+    height: 1px;
+    margin-left: 20px;
+    flex-grow: 1;
+    box-shadow: #1a0e0e 3px 6px 16px;
+  }
+  #other-works-line {
+    border-top: 2px solid #cc3030;
+    height: 1px;
+    margin-top: 80px;
+    margin-left: 20px;
+    flex-grow: 1;
+    box-shadow: #1a0e0e 3px 6px 16px;
+    margin-right: 0px;
+  }
+  article {
+    font-family: "Montserrat", sans-serif;
+    color: whitesmoke;
+    margin-bottom: 3%;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+  }
+}
